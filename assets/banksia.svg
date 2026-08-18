@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 180" width="100%" height="100%">
+  <!-- Banksia & Eucalyptus Branch SVG -->
+  <!-- Stem -->
+  <path d="M70 175 Q65 110 70 50" stroke="#5D4037" stroke-width="5" fill="none" stroke-linecap="round"/>
+  
+  <!-- Serrated Banksia Leaves -->
+  <!-- Left leaf -->
+  <path d="M68 140 Q30 130 10 100 Q40 105 66 125 Z" fill="#3D5A47" stroke="#233527" stroke-width="1.5"/>
+  <line x1="68" y1="140" x2="15" y2="102" stroke="#233527" stroke-width="1"/>
+  <path d="M65 100 Q20 80 5 45 Q35 55 64 85 Z" fill="#4B6B56" stroke="#233527" stroke-width="1.5"/>
+  
+  <!-- Right leaf -->
+  <path d="M72 130 Q110 120 130 90 Q100 95 74 115 Z" fill="#3D5A47" stroke="#233527" stroke-width="1.5"/>
+  <line x1="72" y1="130" x2="125" y2="92" stroke="#233527" stroke-width="1"/>
+  <path d="M75 90 Q120 70 135 35 Q105 45 76 75 Z" fill="#4B6B56" stroke="#233527" stroke-width="1.5"/>
+
+  <!-- Banksia Flower Cone (Warm Ochre / Orange Red spikes) -->
+  <!-- Base cylinder -->
+  <rect x="52" y="25" width="36" height="70" rx="18" fill="#E76F51" stroke="#264653" stroke-width="2"/>
+  <!-- Textured Banksia Bristles / Spikes -->
+  <g stroke="#F4A261" stroke-width="2" stroke-linecap="round">
+    <line x1="48" y1="35" x2="92" y2="35"/>
+    <line x1="46" y1="42" x2="94" y2="42"/>
+    <line x1="45" y1="49" x2="95" y2="49"/>
+    <line x1="44" y1="56" x2="96" y2="56"/>
+    <line x1="45" y1="63" x2="95" y2="63"/>
+    <line x1="46" y1="70" x2="94" y2="70"/>
+    <line x1="48" y1="77" x2="92" y2="77"/>
+    <line x1="52" y1="84" x2="88" y2="84"/>
+  </g>
+  <!-- Gold highlight bristles -->
+  <g stroke="#E9C46A" stroke-width="2" stroke-linecap="round">
+    <line x1="54" y1="38" x2="86" y2="38"/>
+    <line x1="52" y1="45" x2="88" y2="45"/>
+    <line x1="50" y1="52" x2="90" y2="52"/>
+    <line x1="50" y1="60" x2="90" y2="60"/>
+    <line x1="52" y1="67" x2="88" y2="67"/>
+    <line x1="54" y1="74" x2="86" y2="74"/>
+  </g>
+</svg>

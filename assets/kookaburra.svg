@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 220" width="100%" height="100%">
+  <!-- Perched Kookaburra SVG -->
+  <!-- Branch & Gum leaves -->
+  <path d="M-10 180 Q60 170 170 185" stroke="#795548" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <path d="M120 180 Q145 160 160 145" stroke="#795548" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <!-- Gum leaves -->
+  <path d="M130 175 C145 150 165 155 165 170 C165 180 145 185 130 175 Z" fill="#52796F" stroke="#2F3E46" stroke-width="1.5"/>
+  <path d="M140 182 C160 175 175 190 160 205 C145 205 138 190 140 182 Z" fill="#84A98C" stroke="#2F3E46" stroke-width="1.5"/>
+  <path d="M40 185 C25 200 10 195 15 180 C20 170 35 175 40 185 Z" fill="#52796F" stroke="#2F3E46" stroke-width="1.5"/>
+
+  <!-- Tail feathers -->
+  <path d="M45 150 L35 200 L50 205 L60 155 Z" fill="#6C584C" stroke="#2B2D42" stroke-width="2"/>
+  <path d="M50 155 L45 208 L58 212 L65 155 Z" fill="#8C705F" stroke="#2B2D42" stroke-width="1.5"/>
+  <line x1="38" y1="185" x2="48" y2="185" stroke="#F0EFEB" stroke-width="2"/>
+  <line x1="42" y1="195" x2="52" y2="195" stroke="#F0EFEB" stroke-width="2"/>
+  <line x1="48" y1="202" x2="56" y2="202" stroke="#F0EFEB" stroke-width="2"/>
+
+  <!-- Body (Cream / Off-white breast) -->
+  <path d="M50 85 C40 110 45 150 70 170 C95 180 120 165 125 135 C130 105 120 85 95 80 Z" fill="#F8F9FA" stroke="#2B2D42" stroke-width="2.5"/>
+  <!-- Feather texture on chest -->
+  <path d="M68 115 Q75 122 82 115" stroke="#D3D3D3" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M62 130 Q70 138 78 130" stroke="#D3D3D3" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M78 140 Q86 148 94 140" stroke="#D3D3D3" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M85 125 Q92 132 100 125" stroke="#D3D3D3" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Wing with classic Blue Wing Patch (Dacelo novaeguineae) -->
+  <path d="M80 85 C65 100 60 140 75 168 C82 170 105 150 115 120 C120 100 105 85 80 85 Z" fill="#584236" stroke="#2B2D42" stroke-width="2.5"/>
+  <!-- Vibrant Blue Wing feathers -->
+  <path d="M78 110 C85 105 102 115 95 130 C88 140 78 135 78 110 Z" fill="#00B4D8" stroke="#0077B6" stroke-width="1.5"/>
+  <path d="M82 116 C87 112 98 120 94 130 C90 136 84 132 82 116 Z" fill="#90E0EF"/>
+
+  <!-- Head -->
+  <path d="M50 45 C45 25 75 15 100 25 C120 35 125 60 115 80 C95 85 60 80 50 45 Z" fill="#FFFDF7" stroke="#2B2D42" stroke-width="2.5"/>
+  <!-- Crown / Brown cap -->
+  <path d="M60 22 C75 18 95 20 106 28 C98 38 85 36 60 22 Z" fill="#584236" stroke="#2B2D42" stroke-width="1.5"/>
+
+  <!-- Distinctive Eye Stripe (Dark Mask) -->
+  <path d="M52 48 C65 42 90 42 115 50 C118 56 110 65 95 62 C75 58 60 62 52 48 Z" fill="#3D2619" stroke="#2B2D42" stroke-width="1.5"/>
+
+  <!-- Eye -->
+  <circle cx="82" cy="48" r="6" fill="#F4A261" stroke="#2B2D42" stroke-width="1.5"/>
+  <circle cx="83" cy="48" r="3.5" fill="#111"/>
+  <circle cx="84.5" cy="46.5" r="1.2" fill="#FFF"/>
+
+  <!-- Prominent Strong Beak -->
+  <!-- Upper beak (dark brown/black) -->
+  <path d="M96 42 L150 55 C140 60 120 62 95 60 Z" fill="#2B2D42" stroke="#111" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Lower beak (pale horn / bone) -->
+  <path d="M96 60 L145 56 C135 68 115 72 96 66 Z" fill="#E9C46A" stroke="#2B2D42" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Mouth line -->
+  <line x1="96" y1="60" x2="148" y2="55" stroke="#111" stroke-width="1.5"/>
+
+  <!-- Feet gripping branch -->
+  <path d="M72 170 L70 182 M76 170 L76 183 M82 170 L83 182" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+  <path d="M92 170 L91 182 M97 170 L97 183 M103 170 L104 182" stroke="#2B2D42" stroke-width="3" stroke-linecap="round"/>
+</svg>
