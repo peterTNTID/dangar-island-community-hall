@@ -149,8 +149,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
-        // Submit via AJAX to FormSubmit endpoint targeting dangarislandhall@gmail.com
-        await fetch('https://formsubmit.co/ajax/dangarislandhall@gmail.com', {
+        // Submit via AJAX to FormSubmit endpoint using secure token hash
+        await fetch('https://formsubmit.co/ajax/9ab7632c01f99e04ab2e3a6b3d06b3ae', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
 
       try {
-        const response = await fetch('https://formsubmit.co/ajax/dangarislandhall@gmail.com', {
+        const response = await fetch('https://formsubmit.co/ajax/9ab7632c01f99e04ab2e3a6b3d06b3ae', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
