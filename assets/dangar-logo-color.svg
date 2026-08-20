@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Text Paths for perfect circular alignment -->
+    <path id="circleTextTop" d="M 75,250 A 175,175 0 0,1 425,250" />
+    <path id="circleTextBottom" d="M 425,250 A 175,175 0 0,1 75,250" />
+
+    <!-- Gradients -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#183644"/>
+      <stop offset="50%" stop-color="#1F4759"/>
+      <stop offset="100%" stop-color="#142C38"/>
+    </linearGradient>
+
+    <radialGradient id="centerSkyGrad" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="65%" stop-color="#F2F8F8"/>
+      <stop offset="100%" stop-color="#DEEFF2"/>
+    </radialGradient>
+
+    <linearGradient id="fishBodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A7584"/>
+      <stop offset="35%" stop-color="#7EA6B5"/>
+      <stop offset="70%" stop-color="#D7E8ED"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+
+    <linearGradient id="ferryHullGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2F664F"/>
+      <stop offset="100%" stop-color="#1D4233"/>
+    </linearGradient>
+
+    <linearGradient id="ferryRoofGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D95A38"/>
+      <stop offset="100%" stop-color="#B84222"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Base Circle & Shadow -->
+  <circle cx="250" cy="250" r="240" fill="#142C38" stroke="#F5B838" stroke-width="6"/>
+
+  <!-- Outer Ring Band -->
+  <circle cx="250" cy="250" r="230" fill="url(#ringGrad)" stroke="#FFFFFF" stroke-width="3.5"/>
+  <circle cx="250" cy="250" r="148" fill="none" stroke="#FFFFFF" stroke-width="3.5"/>
+  <circle cx="250" cy="250" r="142" fill="none" stroke="#F5B838" stroke-width="2"/>
+
+  <!-- Top Text: DANGAR ISLAND -->
+  <text font-family="'Plus Jakarta Sans', 'Fredoka', 'Montserrat', sans-serif" font-weight="900" font-size="34" letter-spacing="8" fill="#FFFFFF">
+    <textPath href="#circleTextTop" startOffset="50%" text-anchor="middle">
+      DANGAR ISLAND
+    </textPath>
+  </text>
+
+  <!-- Bottom Text: DYARUBBIN -->
+  <text font-family="'Plus Jakarta Sans', 'Fredoka', 'Montserrat', sans-serif" font-weight="900" font-size="32" letter-spacing="10" fill="#F5B838">
+    <textPath href="#circleTextBottom" startOffset="50%" text-anchor="middle">
+      DYARUBBIN
+    </textPath>
+  </text>
+
+  <!-- Side Separator Dots / Bullets -->
+  <circle cx="70" cy="250" r="6.5" fill="#F5B838" stroke="#FFFFFF" stroke-width="2"/>
+  <circle cx="430" cy="250" r="6.5" fill="#F5B838" stroke="#FFFFFF" stroke-width="2"/>
+
+  <!-- Inner Artwork Center Circle -->
+  <circle cx="250" cy="250" r="138" fill="url(#centerSkyGrad)"/>
+
+  <!-- Subtle River Background Haze -->
+  <path d="M 120,290 Q 250,265 380,290 L 380,380 A 138,138 0 0,1 120,365 Z" fill="#D3EBF0" opacity="0.6"/>
+
+  <!-- =========================================================================
+       LEAPING FISH (HAWKESBURY RIVER MULLET)
+       ========================================================================= -->
+  <g id="leapingFish" stroke="#1D3557" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    
+    <!-- Tail Fin (Pivoting from tail stalk) -->
+    <!-- Top Fin lobe -->
+    <path d="M 172,215 C 150,195 130,175 140,150 C 158,168 178,188 185,202 Z" fill="#6C97A6"/>
+    <!-- Tail ray lines -->
+    <path d="M 148,162 Q 165,182 178,206" fill="none" stroke="#2C4E5E" stroke-width="1.5"/>
+    <path d="M 158,172 Q 170,190 181,210" fill="none" stroke="#2C4E5E" stroke-width="1.5"/>
+
+    <!-- Bottom Fin lobe -->
+    <path d="M 172,218 C 150,230 135,255 142,280 C 160,256 178,236 186,224 Z" fill="#6C97A6"/>
+    <path d="M 150,268 Q 166,246 178,225" fill="none" stroke="#2C4E5E" stroke-width="1.5"/>
+    <path d="M 160,256 Q 172,238 181,222" fill="none" stroke="#2C4E5E" stroke-width="1.5"/>
+
+    <!-- Dorsal Fin (Top arch fin) -->
+    <path d="M 230,140 C 265,115 315,122 335,148 C 305,146 270,148 245,155 Z" fill="#528394"/>
+    <!-- Dorsal Fin rays -->
+    <path d="M 260,132 L 255,150" stroke="#2C4E5E" stroke-width="1.5"/>
+    <path d="M 282,128 L 278,148" stroke="#2C4E5E" stroke-width="1.5"/>
+    <path d="M 305,134 L 302,148" stroke="#2C4E5E" stroke-width="1.5"/>
+
+    <!-- Pelvic & Anal Fins -->
+    <path d="M 230,225 C 220,240 215,255 225,260 C 235,255 240,235 242,222 Z" fill="#528394"/>
+    <path d="M 270,208 C 262,222 258,235 266,238 C 275,232 278,218 280,204 Z" fill="#528394"/>
+
+    <!-- Main Fish Body (Curved Leaping Shape) -->
+    <path d="M 178,215 
+             C 190,165 260,128 335,150 
+             C 370,162 390,185 392,205 
+             C 390,220 372,228 350,226 
+             C 305,224 250,235 208,232 
+             C 192,230 182,225 178,215 Z" 
+          fill="url(#fishBodyGrad)"/>
+
+    <!-- Fish Belly Highlight (Light Silver / Cream) -->
+    <path d="M 188,222 
+             C 230,225 285,218 342,220 
+             C 362,221 378,215 385,205 
+             C 368,214 340,210 300,205 
+             C 255,200 215,208 188,222 Z" 
+          fill="#FFFFFF" stroke="none"/>
+
+    <!-- Gill Cover & Head Contours -->
+    <path d="M 345,162 C 330,175 330,205 348,220" fill="none" stroke="#1D3557" stroke-width="2.5"/>
+    <path d="M 358,166 C 348,178 348,198 360,212" fill="none" stroke="#2C4E5E" stroke-width="2"/>
+
+    <!-- Pectoral Fin (Side Wing-like Fin) -->
+    <path d="M 320,185 C 290,195 272,215 282,222 C 300,220 318,208 332,192 Z" fill="#6C97A6"/>
+    <path d="M 292,208 Q 308,202 322,192" fill="none" stroke="#2C4E5E" stroke-width="1.5"/>
+
+    <!-- Eye & Pupil -->
+    <circle cx="368" cy="184" r="7.5" fill="#F5B838" stroke="#1D3557" stroke-width="2"/>
+    <circle cx="369" cy="184" r="4" fill="#142C38"/>
+    <circle cx="370.5" cy="182" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Mouth & Jaw Line -->
+    <path d="M 390,204 C 382,202 374,204 366,206" fill="none" stroke="#1D3557" stroke-width="2.5"/>
+
+    <!-- Speckled Scales Texture (Hawkesbury River Mullet) -->
+    <g fill="#2C4E5E" stroke="none">
+      <circle cx="250" cy="160" r="1.8"/>
+      <circle cx="262" cy="156" r="1.8"/>
+      <circle cx="274" cy="154" r="1.8"/>
+      <circle cx="286" cy="154" r="1.8"/>
+      <circle cx="298" cy="156" r="1.8"/>
+      <circle cx="310" cy="160" r="1.8"/>
+      
+      <circle cx="242" cy="168" r="1.8"/>
+      <circle cx="256" cy="165" r="1.8"/>
+      <circle cx="270" cy="163" r="1.8"/>
+      <circle cx="284" cy="162" r="1.8"/>
+      <circle cx="298" cy="164" r="1.8"/>
+      <circle cx="312" cy="168" r="1.8"/>
+      <circle cx="325" cy="174" r="1.8"/>
+
+      <circle cx="232" cy="178" r="1.8"/>
+      <circle cx="246" cy="174" r="1.8"/>
+      <circle cx="260" cy="172" r="1.8"/>
+      <circle cx="274" cy="171" r="1.8"/>
+      <circle cx="288" cy="172" r="1.8"/>
+      <circle cx="302" cy="176" r="1.8"/>
+
+      <circle cx="218" cy="188" r="1.8"/>
+      <circle cx="232" cy="184" r="1.8"/>
+      <circle cx="246" cy="182" r="1.8"/>
+      <circle cx="260" cy="181" r="1.8"/>
+      <circle cx="274" cy="182" r="1.8"/>
+    </g>
+
+    <!-- Water Drops Leaping Splashes -->
+    <g fill="#528394" stroke="#1D3557" stroke-width="1.2">
+      <circle cx="152" cy="192" r="3.5"/>
+      <circle cx="162" cy="178" r="2.5"/>
+      <circle cx="140" cy="215" r="3"/>
+      <circle cx="388" cy="155" r="3"/>
+      <circle cx="400" cy="170" r="2.5"/>
+    </g>
+  </g>
+
+
+  <!-- =========================================================================
+       HAWKESBURY TIMBER FERRY BOAT
+       ========================================================================= -->
+  <g id="timberFerry" stroke="#142C38" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round">
+    
+    <!-- Chimney / Exhaust Vent on Roof -->
+    <rect x="256" y="240" width="18" height="15" rx="2" fill="#E8F1F2" stroke="#142C38" stroke-width="2.5"/>
+    <line x1="254" y1="240" x2="276" y2="240" stroke="#142C38" stroke-width="2.5"/>
+
+    <!-- Cabin Roof (Terracotta / Coral Red with Overhang) -->
+    <path d="M 205,255 L 340,255 L 334,262 L 208,262 Z" fill="url(#ferryRoofGrad)" stroke="#142C38" stroke-width="2.5"/>
+
+    <!-- Wheelhouse Cabin Walls (Warm Cream Timber) -->
+    <path d="M 212,262 L 332,262 L 324,302 L 218,302 Z" fill="#FFF8E7" stroke="#142C38" stroke-width="2.5"/>
+
+    <!-- Cabin Windows (4 Pane Rectangles with River Reflections) -->
+    <g fill="#9FD3E0" stroke="#142C38" stroke-width="2">
+      <!-- Front Wheelhouse Window -->
+      <rect x="222" y="268" width="20" height="22" rx="2"/>
+      <rect x="248" y="268" width="18" height="22" rx="2"/>
+      <rect x="272" y="268" width="18" height="22" rx="2"/>
+      <rect x="296" y="268" width="22" height="22" rx="2"/>
+
+      <!-- Window Glare Highlights -->
+      <line x1="225" y1="284" x2="236" y2="272" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="251" y1="284" x2="260" y2="272" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="275" y1="284" x2="284" y2="272" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="299" y1="284" x2="310" y2="272" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+
+    <!-- Gunwale / Rubbing Strake Rail (Gold Trim) -->
+    <rect x="150" y="300" width="205" height="5" rx="1.5" fill="#F5B838" stroke="#142C38" stroke-width="2"/>
+
+    <!-- Timber Hull (Green Clinker Planking) -->
+    <path d="M 148,305 
+             L 352,305 
+             C 362,305 348,348 250,348 
+             C 152,348 138,305 148,305 Z" 
+          fill="url(#ferryHullGrad)" stroke="#142C38" stroke-width="3"/>
+
+    <!-- Clinker Planking Horizontal Rib Lines -->
+    <path d="M 146,314 Q 250,317 352,314" fill="none" stroke="#FFFFFF" stroke-width="1.8" opacity="0.9"/>
+    <path d="M 152,324 Q 250,328 346,324" fill="none" stroke="#FFFFFF" stroke-width="1.8" opacity="0.9"/>
+    <path d="M 162,334 Q 250,338 336,334" fill="none" stroke="#FFFFFF" stroke-width="1.8" opacity="0.9"/>
+
+    <!-- Bow & Stern Stems -->
+    <line x1="148" y1="305" x2="160" y2="340" stroke="#142C38" stroke-width="3"/>
+    <line x1="352" y1="305" x2="338" y2="340" stroke="#142C38" stroke-width="3"/>
+  </g>
+
+
+  <!-- =========================================================================
+       RIVER WATER WAVES (HAWKESBURY RIVER / DYARUBBIN)
+       ========================================================================= -->
+  <g fill="none" stroke-linecap="round">
+    <!-- Top Wave Ripple -->
+    <path d="M 145,352 Q 170,344 195,352 T 245,352 T 295,352 T 345,352 T 365,352" 
+          stroke="#183644" stroke-width="4.5"/>
+    <path d="M 145,352 Q 170,344 195,352 T 245,352 T 295,352 T 345,352 T 365,352" 
+          stroke="#528394" stroke-width="2.5"/>
+
+    <!-- Middle Wave Ripple -->
+    <path d="M 160,364 Q 185,356 210,364 T 260,364 T 310,364 T 350,364" 
+          stroke="#183644" stroke-width="4"/>
+    <path d="M 160,364 Q 185,356 210,364 T 260,364 T 310,364 T 350,364" 
+          stroke="#F5B838" stroke-width="2"/>
+
+    <!-- Bottom Wave Ripple -->
+    <path d="M 180,375 Q 205,368 230,375 T 280,375 T 330,375" 
+          stroke="#183644" stroke-width="3.5"/>
+    <path d="M 180,375 Q 205,368 230,375 T 280,375 T 330,375" 
+          stroke="#FFFFFF" stroke-width="1.8"/>
+  </g>
+
+</svg>
