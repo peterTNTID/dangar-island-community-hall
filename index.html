@@ -143,24 +143,84 @@
           </p>
         </div>
 
-        <!-- Bin Week Notice & Interactive Switcher -->
-        <div class="bin-week-card">
-          <div class="bin-week-info">
-            <span class="bin-icon-badge">♻️</span>
-            <div>
-              <h3 class="bin-week-title">Thursday Night Feature Alternates by Bin Week!</h3>
-              <p class="bin-week-desc">
-                Cinématèque film nights run on <strong>Green Bin Week</strong>, and Discussion Group meets on <strong>Yellow Bin Week</strong>.
-              </p>
+        <!-- WHAT'S NEXT AT THE HALL - REAL-TIME COUNTDOWN & SPOTLIGHT -->
+        <div class="next-activity-hero" id="nextActivityHero">
+          <div class="next-hero-header">
+            <div class="next-hero-badge">
+              <span class="live-pulse-dot" aria-hidden="true"></span>
+              <span class="next-hero-kicker">WHAT'S NEXT AT THE HALL?</span>
+            </div>
+            <div class="next-hero-location" id="locationStatus">
+              <span class="geo-icon">📍</span>
+              <span id="geoText">Hawkesbury River Time: <strong id="sydneyTimeDisplay">--:--</strong></span>
+              <button type="button" class="btn-geo-detect" id="btnDetectLocation" title="Check your distance to the Hall">
+                Detect Distance
+              </button>
             </div>
           </div>
-          <div class="bin-week-toggles" role="group" aria-label="Bin Week Switcher">
-            <button type="button" class="btn-bin active" id="btnGreenBin" data-bin="green">
-              <span class="bin-dot green-dot"></span> Green Bin Week (Film)
-            </button>
-            <button type="button" class="btn-bin" id="btnYellowBin" data-bin="yellow">
-              <span class="bin-dot yellow-dot"></span> Yellow Bin Week (Discussion)
-            </button>
+
+          <div class="next-hero-body">
+            <!-- Event Info Left Column -->
+            <div class="next-event-details">
+              <div class="next-event-status-pill" id="nextEventStatus">UPCOMING GATHERING</div>
+              <h3 class="next-event-title" id="nextEventTitle">Loading next activity...</h3>
+              <p class="next-event-meta" id="nextEventMeta">
+                <span class="meta-item">🗓️ <strong id="nextEventDay">--</strong> at <strong id="nextEventTime">--</strong></span>
+                <span class="meta-item bin-week-highlight" id="nextEventBinWeek" style="display:none;">🟢 Green Bin Week</span>
+              </p>
+              <p class="next-event-desc" id="nextEventDesc">
+                Checking the weekly community timetable...
+              </p>
+              <div class="next-event-footer">
+                <span class="event-tag" id="nextEventTag">Community</span>
+                <span class="next-hall-loc">🏛️ Dangar Island Community Hall</span>
+              </div>
+            </div>
+
+            <!-- Countdown Timer Right Column -->
+            <div class="next-countdown-container">
+              <div class="countdown-label" id="countdownLabel">STARTING IN</div>
+              
+              <div class="countdown-grid" id="countdownGrid" role="timer" aria-live="off">
+                <div class="countdown-block">
+                  <div class="countdown-digit-box">
+                    <span class="countdown-number" id="timerDays">00</span>
+                  </div>
+                  <span class="countdown-unit">DAYS</span>
+                </div>
+                
+                <div class="countdown-divider" aria-hidden="true">:</div>
+
+                <div class="countdown-block">
+                  <div class="countdown-digit-box">
+                    <span class="countdown-number" id="timerHours">00</span>
+                  </div>
+                  <span class="countdown-unit">HOURS</span>
+                </div>
+
+                <div class="countdown-divider" aria-hidden="true">:</div>
+
+                <div class="countdown-block">
+                  <div class="countdown-digit-box">
+                    <span class="countdown-number" id="timerMinutes">00</span>
+                  </div>
+                  <span class="countdown-unit">MINS</span>
+                </div>
+
+                <div class="countdown-divider" aria-hidden="true">:</div>
+
+                <div class="countdown-block">
+                  <div class="countdown-digit-box">
+                    <span class="countdown-number" id="timerSeconds">00</span>
+                  </div>
+                  <span class="countdown-unit">SECS</span>
+                </div>
+              </div>
+
+              <div class="countdown-subtext" id="countdownSubtext">
+                Live countdown based on local Hawkesbury River time (AEST/AEDT)
+              </div>
+            </div>
           </div>
         </div>
 
@@ -224,8 +284,14 @@
           <!-- THURSDAY -->
           <article class="day-card day-thursday-card" data-category="yoga social talks">
             <header class="day-header day-thursday">
-              <span class="day-name">Thursdays</span>
-              <span class="day-badge">Active & Evening</span>
+              <div>
+                <span class="day-name">Thursdays</span>
+                <span class="day-badge">Active & Evening</span>
+              </div>
+              <div class="thursday-bin-toggle" role="group" aria-label="Thursday Bin Week Switcher">
+                <button type="button" class="btn-bin-mini active" id="btnGreenBin" data-bin="green" title="Green Bin Week: Cinématèque Film">🟢 Film</button>
+                <button type="button" class="btn-bin-mini" id="btnYellowBin" data-bin="yellow" title="Yellow Bin Week: Discussion Group">🟡 Discussion</button>
+              </div>
             </header>
             <div class="day-events">
               <!-- Morning Exercise -->

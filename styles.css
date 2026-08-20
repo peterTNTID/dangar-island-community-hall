@@ -544,99 +544,302 @@ body {
   border-bottom: 3px solid var(--border-dark);
 }
 
-/* Bin Week Switcher Card */
-.bin-week-card {
-  background-color: var(--bg-mint);
-  border: 3px solid var(--border-dark);
+/* ==========================================================================
+   WHAT'S NEXT AT THE HALL (REAL-TIME COUNTDOWN & GEOLOCATION SPOTLIGHT)
+   ========================================================================== */
+.next-activity-hero {
+  background: linear-gradient(135deg, #FFFDF8 0%, #FAF2E3 100%);
+  border: 3.5px solid var(--border-dark);
   border-radius: var(--radius-lg);
-  box-shadow: var(--card-shadow);
-  padding: 1.25rem 1.5rem;
-  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow-lg);
+  padding: 1.75rem 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.next-hero-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1.25rem;
-}
-
-.bin-week-info {
-  display: flex;
-  align-items: center;
   gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 2.5px dashed rgba(34, 40, 49, 0.2);
+  margin-bottom: 1.5rem;
 }
 
-.bin-icon-badge {
-  font-size: 2rem;
-  background-color: #FFF;
-  border: 2px solid var(--border-dark);
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  display: flex;
+.next-hero-badge {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  gap: 0.6rem;
+  background-color: var(--river-teal);
+  color: #FFF;
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--border-dark);
   box-shadow: 2px 2px 0px var(--border-dark);
 }
 
-.bin-week-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--ink-charcoal);
-  margin-bottom: 0.2rem;
+.live-pulse-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #2ECC71;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-dark);
+  display: inline-block;
+  animation: livePulse 1.8s infinite;
 }
 
-.bin-week-desc {
-  font-size: 0.95rem;
+@keyframes livePulse {
+  0% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.7); }
+  70% { transform: scale(1.15); box-shadow: 0 0 0 8px rgba(46, 204, 113, 0); }
+  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}
+
+.next-hero-kicker {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+}
+
+.next-hero-location {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-charcoal);
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-pill);
+  padding: 0.3rem 0.85rem;
+}
+
+.btn-geo-detect {
+  background-color: var(--poster-yellow);
+  color: var(--ink-charcoal);
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.55rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-geo-detect:hover {
+  background-color: #FFAE19;
+}
+
+.next-hero-body {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.next-event-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.next-event-status-pill {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.8px;
+  background-color: var(--poster-yellow);
+  color: var(--ink-charcoal);
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-pill);
+  padding: 0.15rem 0.65rem;
+  margin-bottom: 0.6rem;
+}
+
+.next-event-status-pill.is-live {
+  background-color: #2ECC71;
+  color: #FFF;
+  animation: gentlePulse 2s infinite;
+}
+
+.next-event-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--ink-charcoal);
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+
+.next-event-meta {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--terracotta-red);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.bin-week-highlight {
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: #D5F5E3;
+  color: #196F3D;
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-pill);
+  padding: 0.15rem 0.55rem;
+}
+
+.bin-week-highlight.yellow-highlight {
+  background-color: #FCF3CF;
+  color: #7D6608;
+}
+
+.next-event-desc {
+  font-size: 1rem;
+  color: var(--ink-muted);
+  line-height: 1.45;
+  margin-bottom: 1.25rem;
+}
+
+.next-event-footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.next-hall-loc {
+  font-size: 0.85rem;
+  font-weight: 600;
   color: var(--ink-muted);
 }
 
-.bin-week-toggles {
-  display: flex;
-  gap: 0.6rem;
-  flex-wrap: wrap;
+/* Big Retro Countdown Container */
+.next-countdown-container {
+  background: var(--river-navy);
+  color: #FFF;
+  border: 3px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.25rem;
+  box-shadow: 4px 4px 0px var(--border-dark);
+  text-align: center;
 }
 
-.btn-bin {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+.countdown-label {
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.9rem;
-  background-color: var(--bg-card);
-  color: var(--ink-charcoal);
-  border: 2px solid var(--border-dark);
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  color: var(--poster-yellow);
+  margin-bottom: 0.85rem;
+  text-transform: uppercase;
+}
+
+.countdown-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.countdown-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 58px;
+}
+
+.countdown-digit-box {
+  background: #FFFDF7;
+  border: 2.5px solid var(--border-dark);
   border-radius: var(--radius-md);
-  padding: 0.55rem 1rem;
+  box-shadow: 2px 2px 0px #111;
+  width: 100%;
+  padding: 0.5rem 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Horizontal score line across digit box */
+.countdown-digit-box::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.countdown-number {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  color: var(--ink-charcoal);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown-unit {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #D3E0EA;
+  margin-top: 0.4rem;
+}
+
+.countdown-divider {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--poster-yellow);
+  margin-top: -1.2rem;
+}
+
+.countdown-subtext {
+  font-size: 0.78rem;
+  color: #CAD5E2;
+  font-weight: 500;
+}
+
+/* Mini Bin Week Toggles inside Thursday Card Header */
+.thursday-bin-toggle {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.btn-bin-mini {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  background-color: #FFF;
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-pill);
+  padding: 0.2rem 0.55rem;
   cursor: pointer;
   transition: var(--transition);
-  box-shadow: 2px 2px 0px var(--border-dark);
 }
 
-.btn-bin:hover {
-  transform: translateY(-2px);
+.btn-bin-mini:hover {
+  background-color: var(--sand-yellow);
 }
 
-.btn-bin.active {
+.btn-bin-mini.active {
   background-color: var(--river-navy);
   color: #FFF;
-}
-
-.bin-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1.5px solid var(--border-dark);
-}
-
-.green-dot {
-  background-color: #2ECC71;
-}
-
-.yellow-dot {
-  background-color: #F1C40F;
 }
 
 /* Filter tabs */
@@ -1872,6 +2075,7 @@ a.item-val:hover {
    RESPONSIVE DESIGN (MOBILE & TABLET)
    ========================================================================== */
 @media (max-width: 900px) {
+  .next-hero-body,
   .friends-grid-content,
   .contact-inner-grid,
   .about-grid {
@@ -1938,5 +2142,28 @@ a.item-val:hover {
 
   .contact-form {
     padding: 1.5rem 1.25rem;
+  }
+
+  .next-activity-hero {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .countdown-grid {
+    gap: 0.2rem;
+  }
+  .countdown-block {
+    min-width: 46px;
+  }
+  .countdown-number {
+    font-size: 1.4rem;
+  }
+  .countdown-unit {
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+  .countdown-divider {
+    font-size: 1.3rem;
   }
 }
